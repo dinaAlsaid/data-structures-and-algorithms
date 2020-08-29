@@ -80,9 +80,11 @@ var arr2 = [];
 
 const citiesAtoJ = (arr) => {
     // Solution code here...
-    let regex = /^([A-J])/g;
-    arr.forEach(e => {
-        if (regex.test(e)) { arr2.push(e); }
+    let regex = /^[A-J]/g
+    arr.forEach(item => {
+        if(regex.test(regex)){
+            arr2.push(item);
+        }
     });
     return arr2;
 };
