@@ -79,9 +79,8 @@ Write a function named mapTwoToThe
 
 const mapTwoToThe = (arr) => {
   // Solution code here...
-  return arr.map((item)=>{
-    Math.pow(2,item);
-  })
+  let retArr = arr.map(x => Math.pow(2,x));
+  return retArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
