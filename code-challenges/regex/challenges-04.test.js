@@ -76,14 +76,14 @@ that takes in an array of city names
 and uses a regular expression pattern
  to return a new array containing any cities that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
-var arr2 = [];
 
 const citiesAtoJ = (arr) => {
-    // Solution code here...
-    let regex = /^[A-J]/g
+    let arr2 = [];
+    let regex = /^[A-J].*/
     arr.forEach(item => {
-        if(regex.test(regex)){
-            arr2.push(item);
+        let matcharr = item.match(regex);
+        if(matcharr !== null){
+        arr2.push(matcharr[0]);
         }
     });
     return arr2;
