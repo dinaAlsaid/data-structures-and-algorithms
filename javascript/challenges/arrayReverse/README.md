@@ -13,4 +13,4 @@ This solution is the easiest logically but it uses up twice the space and it tak
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![whiteboard solution](../../assets/array-reverse.PNG)
+![whiteboard solution](assets/array-reverse.PNG)
