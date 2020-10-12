@@ -1,65 +1,25 @@
 # Data Structures and Algorithms
 
-## Create a copy of this repository
+## Language: `JavaScript`
 
-1. Create a new repository in your GitHub account called `data-structures-and-algorithms`
-1. Clone the empty repository to your machine
-1. Choose the "Download" option under "Clone or Download" for this repository
-1. Copy that .zip file inside of the local `data-structures-and-algorithms` repo created in step 2
-1. Unzip the file there
-1. Remove the .zip file
-1. Run the command `npm install` from the repository root directory
-1. Do an `ACP` of the `data-structures-and-algorithms` repository
+## Table of contents
 
-## Repository Quick Tour and Usage
+level|topic
+---|---
+301|[ForEach](https://github.com/dinaAlsaid/data-structures-and-algorithms/tree/master/code-challenges/forEach)
+301|[Filter](https://github.com/dinaAlsaid/data-structures-and-algorithms/tree/master/code-challenges/filter)
+301|[2D arrays](https://github.com/dinaAlsaid/data-structures-and-algorithms/tree/master/code-challenges/2Darray)
+301|[array methods](https://github.com/dinaAlsaid/data-structures-and-algorithms/tree/master/code-challenges/arrayMethods)
+301|[map](https://github.com/dinaAlsaid/data-structures-and-algorithms/tree/master/code-challenges/map)
+301|[objects](https://github.com/dinaAlsaid/data-structures-and-algorithms/tree/master/code-challenges/objects)
+301|[reduce](https://github.com/dinaAlsaid/data-structures-and-algorithms/tree/master/code-challenges/reduce)
+301|[regular expressions](https://github.com/dinaAlsaid/data-structures-and-algorithms/tree/master/code-challenges/regex)
+301|[sort](https://github.com/dinaAlsaid/data-structures-and-algorithms/tree/master/code-challenges/sort)
+301|[string manipulation](https://github.com/dinaAlsaid/data-structures-and-algorithms/tree/master/code-challenges/stringMan)
+301|[value and refernece](https://github.com/dinaAlsaid/data-structures-and-algorithms/tree/master/code-challenges/value-vs-reference)
+301|[review](https://github.com/dinaAlsaid/data-structures-and-algorithms/tree/master/code-challenges/review)
+301|[all methods](https://github.com/dinaAlsaid/data-structures-and-algorithms/tree/master/code-challenges/allmethods)
+401|[]()
+## notes
 
-### 301 Code Challenges
-
-Under the `data-structures-and-algorithms` repository, at the top level is a folder called `code-challenges`
-
-Each day, you'll add one new file to this folder to do your work for the day's assigned code challenge
-
-### 401 Data Structures, Code Challenges
-
-- Each Data Structure should be implemented separately in a language specific manner, in a properly named folder.
-  - i.e. `linked-lists`
-- For daily challenges:
-  - Each implementation should have a challenges folder, named `challenges`
-  - Within the challenges folder, a subfolder bearing the name of the challenge
-    - i.e. `remove-duplicates`
-  - Within the proper subfolder:
-    - A README.md that will house your challenge summary, whiteboard photos
-    - Your implementation and tests for the code challenge
-    - Perform your work in accordance with your 401 language's instructions
-
-The final structure should resemble this:
-
-```bash
-  data-structures-and-algorithms
-  |
-  ├── code-challenges
-  │  └── challenge-01.test.js
-  │  └── challenge-02.test.js
-  │  └── ...
-  |
-  ├── [language]
-  │   └── [data-structure-name]
-  │       └── challenges
-  │   └── [data-structure-name]
-  │       └── challenges
-  │   └── [data-structure-name]
-  │       └── challenges
-  │   └── ...
-  |
-  ├── node_modules
-  |
-  ├── .github
-  │   └── workflows
-  │       └── javascript-tests.yml
-  │
-  ├── .eslintrc.json
-  ├── .gitignore
-  ├── package-lock.json
-  ├── package.json
-  └── README.md
-```
+*you will find code401 challenges in javascript/challenges
