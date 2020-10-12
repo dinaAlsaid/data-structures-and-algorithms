@@ -12,4 +12,14 @@ describe("insert shift Array ", () => {
     expect(arrayShift([4,8,15,23,42], 16)).toEqual([4,8,15,16,23,42]);
   });
 });
+describe("when the passed array has one element ", () => {
+  it("Should return an array of two elements", () => {
+    expect(arrayShift([1], 16)).toEqual([1,16]);
+  });
+});
 
+describe("when the passed array is empty ", () => {
+  it("Should return an array of the passed value", () => {
+    expect(arrayShift([], 16)).toEqual([16]);
+  });
+});
