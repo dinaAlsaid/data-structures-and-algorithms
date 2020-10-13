@@ -19,3 +19,4 @@ level|code challenge
 301|all methods
 401|reverse array
 401|insert shift array
+401|Binary search
