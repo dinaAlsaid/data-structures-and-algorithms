@@ -6,10 +6,13 @@ a function which takes in 2 parameters: a sorted array and the search key. Witho
 
 ## Approach & Efficiency
 
-split the array from the middle into two new arrays then add the value to the end of the first part. then join the two new arrays and return the resulting array.
+compare The key with the middle element if it is equal to it return it, if not the range will be reduced.
+start at the mid point to the end of the array if the key is greater than the mid point and find a new mid point
+or if it is smaller start from the previos start point to the mid point. repeat until found or unitl the start point becomes larger than the end point
 
-It works for both odd and even number of elements.
+it is important for the array to be sorted.
+for larger arrays it cuts down the excution time very significantly compared to normal search.
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![whiteboard solution](./array-shift.png)
+![whiteboard solution](./arrayBinarSearch.png)
