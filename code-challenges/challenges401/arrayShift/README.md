@@ -1,4 +1,4 @@
-# Reverse an Array
+# insert shift Array
 
 a function called which takes in an array and the value to be added in the middle without utilizing any of the built-in methods in JavaScript.
 
