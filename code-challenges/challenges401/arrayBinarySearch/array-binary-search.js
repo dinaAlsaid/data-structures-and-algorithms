@@ -6,7 +6,7 @@ function binarySearch(arr,key){
 
     while(iLast >= iFirst){
         if (key == arr[mid]){
-            return key;
+            return mid;
         }else if(key < arr[mid]){
             iLast= mid-1;
         }else if (key > arr[mid]){
