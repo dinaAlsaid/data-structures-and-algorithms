@@ -5,7 +5,7 @@ const binarySearch = require('../array-binary-search.js');
 // pass case
 describe('Binary serach ', () => {
   it('Should return the key when found', () => {
-    expect(binarySearch([2, 4, 6, 8], 8)).toEqual(8);
+    expect(binarySearch([2, 4, 6, 8], 8)).toEqual(3);
   });
 });
 
