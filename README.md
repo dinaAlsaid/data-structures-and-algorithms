@@ -21,3 +21,4 @@ level|code challenge
 401|insert shift array
 401|Binary search
 401|linked lists
+401|linked lists insertions
