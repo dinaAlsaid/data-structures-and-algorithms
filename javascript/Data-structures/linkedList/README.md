@@ -10,10 +10,17 @@ Create a Linked list that you can be able to add nodes to, check if it includes 
 
 ## Approach & Efficiency
 
-O(1) Time performance
+O(n) Time performance
 
 ## API
 
 - insert(): inserts a new node to the linked list
 - includes(): checks if a certain value exists in the linked list
 - toString(): represents the linked list and its values as a string
+- append(): inserts a new node to the end of the linked list.
+- insertBefore(): inserts a new node before the first found node that has a value equal to a given value
+- insertAfter(): inserts a new node after the first found node that has a value equal to a given value
+
+## solution
+
+![whiteboard solution](./ll-insertions.png)

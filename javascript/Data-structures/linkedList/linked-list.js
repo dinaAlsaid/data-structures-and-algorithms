@@ -32,6 +32,9 @@ class LinkedList {
       }
       currentNode = currentNode.next;
     }
+    if(currentNode.value === val){
+      return true;
+    }
     //if not found
     return false;
   }
@@ -43,6 +46,55 @@ class LinkedList {
       currentNode = currentNode.next;
     }
     return `${retString}{${currentNode.value}}=> NULL`;
+  }
+  append(val) {
+    return this.insert(val);
+  }
+  insertBefore(val, newVal) {
+    let currentNode = this.head;
+    let newNode = new Node(newVal);
+
+    if (this.includes(val)) {
+      if (this.head.value === val) {
+        newNode.next = currentNode;
+        this.head = newNode;
+        return this;
+      } else {
+        while (currentNode.next) {
+          if (currentNode.next.value === val) {
+            newNode.next = currentNode.next;
+            currentNode.next = newNode;
+            return this;
+          }
+          currentNode = currentNode.next;
+        }
+      }
+    } else {
+      return "exception";
+    }
+  }
+  insertAfter(val, newVal) {
+    let currentNode = this.head;
+    let newNode = new Node(newVal);
+    if (this.includes(val)) {
+      while (currentNode.next) {
+        if (currentNode.value === val) {
+          newNode.next = currentNode.next;
+          currentNode.next = newNode;
+          return this;
+        }
+        currentNode = currentNode.next;
+      }
+      // to check the value of the last node
+      if(currentNode.value === val){
+        newNode.next = currentNode.next;
+        currentNode.next = newNode;
+        return this;
+
+      }
+    } else {
+      return "exception";
+    }
   }
 }
 
