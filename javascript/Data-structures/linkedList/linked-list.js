@@ -32,7 +32,7 @@ class LinkedList {
       }
       currentNode = currentNode.next;
     }
-    if(currentNode.value === val){
+    if (currentNode.value === val) {
       return true;
     }
     //if not found
@@ -86,12 +86,31 @@ class LinkedList {
         currentNode = currentNode.next;
       }
       // to check the value of the last node
-      if(currentNode.value === val){
+      if (currentNode.value === val) {
         newNode.next = currentNode.next;
         currentNode.next = newNode;
         return this;
-
       }
+    } else {
+      return "exception";
+    }
+  }
+
+  returnFromTheEnd(k) {
+    let currentNode = this.head;
+    let llArr = [];
+    while (currentNode.next) {
+      llArr.push(currentNode.value);
+      currentNode = currentNode.next;
+    }
+    // to take the last element too
+    llArr.push(currentNode.value);
+    if (k <= llArr.length - 1 && k >= 0) {
+      let i;
+      for (i = llArr.length - 1; i > llArr.length - 1 - k; i--) {
+        // will incriment the i according to k then i will be used outside the loop
+      }
+      return llArr[i];
     } else {
       return "exception";
     }
