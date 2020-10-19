@@ -1,7 +1,6 @@
 "use strict";
 
 const ll = require("../linkedList/linked-list.js");
-
 describe("Linked lists basic methods", () => {
   it("instantiate an empty linked list", () => {
     const ll1 = new ll();
@@ -197,5 +196,35 @@ describe("Linked lists insertAfter method",()=>{
     expect(node).toEqual(expected);
 
   })
+
+})
+describe('linked lists returnFromTheEnd method',()=>{
+  const ll1 = new ll();
+  ll1.append("a");
+  ll1.append("b");
+  ll1.append("c");
+  it('if k is not positive return an exception',()=>{
+    let kthVal = ll1.returnFromTheEnd(-2);
+    expect(kthVal).toEqual('exception');
+  });
+  it('if k is larger than the linked list length return an exception',()=>{
+    let kthVal = ll1.returnFromTheEnd(4);
+    expect(kthVal).toEqual('exception');
+  });
+  it('k and the length of the list are the same',()=>{
+    let kthVal = ll1.returnFromTheEnd(2);
+    expect(kthVal).toEqual('a');
+  });
+  it('k is not at the end, but somewhere in the middle of the linked list',()=>{
+    let kthVal = ll1.returnFromTheEnd(1);
+    expect(kthVal).toEqual('b');
+  });
+  it('the linked list is of a size 1',()=>{
+    let ll2 = new ll();
+    ll2.append("a");
+    let kthVal = ll2.returnFromTheEnd(0);
+    expect(kthVal).toEqual('a');
+  });
+
 
 })

@@ -20,7 +20,9 @@ O(n) Time performance
 - append(): inserts a new node to the end of the linked list.
 - insertBefore(): inserts a new node before the first found node that has a value equal to a given value
 - insertAfter(): inserts a new node after the first found node that has a value equal to a given value
+- returnFromTheEnd(): Returns the node’s value that is k from the end of the linked list.
 
 ## solution
 
-![whiteboard solution](./ll-insertions.png)
+![whiteboard solution: insertions](./ll-insertions.png)
+![whiteboard solution: kth value from the end](./ll-kth-from-end.png)
