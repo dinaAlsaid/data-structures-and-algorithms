@@ -23,3 +23,4 @@ level|code challenge
 401|linked lists
 401|linked lists insertions
 401|linked lists kth value from the end
+401|zip linked lists
