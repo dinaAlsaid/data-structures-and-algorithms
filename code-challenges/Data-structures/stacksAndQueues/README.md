@@ -1,27 +1,26 @@
-# Stacks and Queues
+# queue with stacks
 
-Stacks and queues are basic data structures that have a significant use in computer science. The stack depends on the LIFO/FILO principle and the queue depends on LILO/FIFO principle.
+implement a queue interface using two stacks, where it will enqueue and dequeue based on FIFO and LILO.
+The Queue will only have two mehods implemented enqueue and dequeue.
+
+## Language: `JavaScript`
 
 ## Challenge
 
-Create classes for both stacks and queues and their methods without using pre-existing methods.
+implement a queue interface using two stacks, where it will enqueue and dequeue based on FIFO and LILO. using previously created stck class and its push pop and peek methods
 
 ## Approach & Efficiency
 
-All the methods should have tht time effeciency of O(1)
+Enqueue has the time effeciency of O(1)
+Dequeue has the time eeffeciency of O(n+m)
 
 ## API
-
-Stack methods:
-
-* Push.
-* Pop.
-* peek.
-* isEmpty.
 
 Queue methods:
 
 * enqueue.
 * dequeue.
-* peek.
-* isEmpty.
+
+## solution
+
+![whiteboard](./queuewithstacks.jpg)
