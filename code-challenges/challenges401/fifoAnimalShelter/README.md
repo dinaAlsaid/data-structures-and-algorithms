@@ -8,9 +8,9 @@ Create a class called AnimalShelter which holds only dogs and cats. The shelter 
 
 ## Approach & Efficiency
 
-split the array from the middle into two new arrays then add the value to the end of the first part. then join the two new arrays and return the resulting array.
+create a class that has two queues (using predefined queue class) one for cats and one for dogs then enqueue and dequeue based on the animal type going with the FIFO approach.
 
-It works for both odd and even number of elements.
+Time Efficiency for both methods is O(1) as the queue class
 
 ## Solution
 <!-- Embedded whiteboard image -->
