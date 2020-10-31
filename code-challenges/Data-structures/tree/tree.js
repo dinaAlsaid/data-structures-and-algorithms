@@ -2,8 +2,8 @@
 const SandQ = require("../stacksAndQueues/stacks-and-queues.js");
 
 class Node {
-  constructor() {
-    this.value;
+  constructor(val) {
+    this.value=val;
     this.right = null;
     this.left = null;
   }
@@ -54,22 +54,32 @@ class BinarySearchTree {
     this.tree = tree;
   }
   add(val) {
-    if (!this.tree.root == null) {
+    if (!this.tree.root) {
       this.tree.root = new Node(val);
     } else {
       let front;
       this.Q.enqueue(this.tree.root);
 
-      while (this.Q.peek()) {
+      while (this.Q.peek().value) {
+
         front = this.Q.dequeue();
-        if (front.left) {
+
+        if (!front.left){
+          front.left =new Node(val);
+          break;
+        }else {
           this.Q.enqueue(front.left);
         }
-        if (front.right) {
+        if (!front.right){
+          front.right =new Node(val);
+          break;
+
+        }else {
           this.Q.enqueue(front.right);
         }
       }
       front = new Node(val);
+
     }
   }
   contain(val) {
