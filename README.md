@@ -28,3 +28,4 @@ level|code challenge
 401|Queue with stack
 401|FIFO animal shelter
 401|multi bracket validation
+401|binary trees
