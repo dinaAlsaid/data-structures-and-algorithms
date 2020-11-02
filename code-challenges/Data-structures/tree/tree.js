@@ -3,7 +3,7 @@ const SandQ = require("../stacksAndQueues/stacks-and-queues.js");
 
 class Node {
   constructor(val) {
-    this.value=val;
+    this.value = val;
     this.right = null;
     this.left = null;
   }
@@ -16,6 +16,9 @@ class BinaryTree {
 
   preOrder() {
     const results = [];
+    if (!this.root) {
+      return results;
+    }
     const traverse = (node) => {
       results.push(node.value);
       if (node.left) traverse(node.left);
@@ -27,6 +30,9 @@ class BinaryTree {
 
   inOrder() {
     const results = [];
+    if (!this.root) {
+      return results;
+    }
     const traverse = (node) => {
       if (node.left) traverse(node.left);
       results.push(node.value);
@@ -38,6 +44,9 @@ class BinaryTree {
 
   postOrder() {
     const results = [];
+    if (!this.root) {
+      return results;
+    }
     const traverse = (node) => {
       if (node.left) traverse(node.left);
       if (node.right) traverse(node.right);
@@ -45,6 +54,34 @@ class BinaryTree {
     };
     traverse(this.root);
     return results;
+  }
+  add(val) {
+    let Q = new SandQ.queue();
+
+    if (!this.root) {
+      this.root = new Node(val);
+    } else {
+      let front;
+      Q.enqueue(this.root);
+
+      while (Q.peek().value) {
+        front = Q.dequeue();
+
+        if (!front.left) {
+          front.left = new Node(val);
+          break;
+        } else {
+          Q.enqueue(front.left);
+        }
+        if (!front.right) {
+          front.right = new Node(val);
+          break;
+        } else {
+          Q.enqueue(front.right);
+        }
+      }
+      front = new Node(val);
+    }
   }
 }
 
@@ -61,25 +98,22 @@ class BinarySearchTree {
       this.Q.enqueue(this.tree.root);
 
       while (this.Q.peek().value) {
-
         front = this.Q.dequeue();
 
-        if (!front.left){
-          front.left =new Node(val);
+        if (!front.left) {
+          front.left = new Node(val);
           break;
-        }else {
+        } else {
           this.Q.enqueue(front.left);
         }
-        if (!front.right){
-          front.right =new Node(val);
+        if (!front.right) {
+          front.right = new Node(val);
           break;
-
-        }else {
+        } else {
           this.Q.enqueue(front.right);
         }
       }
       front = new Node(val);
-
     }
   }
   contain(val) {
