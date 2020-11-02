@@ -8,24 +8,11 @@ An important aspect of trees is how to traverse them. Traversing a tree allows u
 
 ## Challenge
 
-Create a BinaryTree class
-Define a method for each of the depth first traversals called preOrder, inOrder, and postOrder which returns an array of the values, ordered appropriately.
+Create a BinaryTree instance method that finds the maximum value in the tree and returns it
 
 ## Approach & Efficiency
 
-All the methods should have the time Efficiency of O(n)
+The method should have the time Efficiency of O(n)
+Space complexity O(n)
 
-## API
-
-Binary Tree methods:
-
-- preOrder
-- inOrder
-- postOrder
-- find-maximum-value
-
-Binary Search tree methods:
-
-- add()
-- contain()
 
