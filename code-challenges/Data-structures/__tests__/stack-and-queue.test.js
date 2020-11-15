@@ -6,7 +6,7 @@ const SandQ = require("../stacksAndQueues/stacks-and-queues");
 /* i ran all the tests on the same stack instance for conveneince */
 
 describe("Stack", () => {
-  let newStack = new SandQ.stack();
+  let newStack = new SandQ.Stack();
   it("Can successfully instantiate an empty stack", () => {
     // check if the created stack is in the correct format
     expect(newStack.isEmpty()).toBe(true);
