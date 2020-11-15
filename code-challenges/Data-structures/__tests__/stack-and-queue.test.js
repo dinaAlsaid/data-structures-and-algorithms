@@ -71,7 +71,7 @@ describe("Stack", () => {
 //--------------------------------Queue------------------------------------//
 
 describe("Queue", () => {
-  let newQueue = new SandQ.queue();
+  let newQueue = new SandQ.Queue();
   it("Can successfully instantiate an empty queue", () => {
     expect(newQueue.front).toBeNull();
     expect(newQueue.rear).toBeNull();
