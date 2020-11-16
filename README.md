@@ -30,3 +30,5 @@ level|code challenge
 401|multi bracket validation
 401|binary trees
 401|find maximum value
+401|Selection sort
+401|merge sort
