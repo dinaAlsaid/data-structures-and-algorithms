@@ -1,5 +1,5 @@
-"use strict";
-const SandQ = require("../stacksAndQueues/stacks-and-queues.js");
+'use strict';
+const SandQ = require('../stacksAndQueues/stacks-and-queues.js');
 
 class Node {
   constructor(val) {
@@ -56,8 +56,7 @@ class BinaryTree {
     return results;
   }
   add(val) {
-    let Q = new SandQ.queue();
-
+    let Q = new SandQ.Queue();
     if (!this.root) {
       this.root = new Node(val);
     } else {
@@ -87,7 +86,7 @@ class BinaryTree {
 
 class BinarySearchTree {
   constructor(tree) {
-    this.Q = new SandQ.queue();
+    this.Q = new SandQ.Queue();
     this.tree = tree;
   }
   add(val) {

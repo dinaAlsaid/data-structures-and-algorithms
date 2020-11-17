@@ -3,7 +3,7 @@
 const SandQ = require('../../Data-structures/stacksAndQueues/stacks-and-queues.js');
 
 function multiBracketValidation(input){
-  let stack= new SandQ.stack();
+  let stack= new SandQ.Stack();
   let charArr= input.split('');
   let flag=1;
   charArr.forEach(char => {

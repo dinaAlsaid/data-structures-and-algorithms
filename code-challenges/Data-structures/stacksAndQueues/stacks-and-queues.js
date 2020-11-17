@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 class Node {
   constructor(value) {
@@ -22,7 +22,7 @@ class Stack {
   }
   pop() {
     if (!this.top) {
-      return "empty";
+      return 'empty';
     } else {
       let preTop = this.top;
       this.top = this.top.next;
@@ -32,7 +32,7 @@ class Stack {
   }
   peek() {
     if (!this.top) {
-      return "empty";
+      return 'empty';
     } else {
       return this.top.value;
     }
@@ -64,8 +64,8 @@ class Queue {
   }
   dequeue() {
     if (!this.front && !this.rear) {
-      return "empty";
-    } else if (this.rear == this.front){
+      return 'empty';
+    } else if (this.rear === this.front){
       let retVal = this.rear.value;
       this.rear=null;
       this.front=null;
@@ -79,7 +79,7 @@ class Queue {
   }
   peek() {
     if (!this.front && !this.rear) {
-      return "empty";
+      return 'empty';
     } else {
       return this.front.value;
     }
@@ -94,6 +94,6 @@ class Queue {
 }
 
 module.exports = {
-  stack: Stack,
-  queue: Queue,
+  Stack: Stack,
+  Queue: Queue,
 };
