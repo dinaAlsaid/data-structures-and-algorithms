@@ -23,4 +23,14 @@ level|code challenge
 401|linked lists
 401|linked lists insertions
 401|linked lists kth value from the end
-401|zip linked lists
+401|linked list Zip
+401|stack and queue
+401|Queue with stack
+401|FIFO animal shelter
+401|multi bracket validation
+401|binary trees
+401|find maximum value
+401|Selection sort
+401|insertion sort
+401|merge sort
+401|quick sort
