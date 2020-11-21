@@ -6,8 +6,8 @@ class PsuedoQueue {
   constructor() {
     this.front = null;
     this.rear = null;
-    this.stack1 = new SandQ.stack();
-    this.stack2 = new SandQ.stack();
+    this.stack1 = new SandQ.Stack();
+    this.stack2 = new SandQ.Stack();
   }
 
   enqueue(val) {

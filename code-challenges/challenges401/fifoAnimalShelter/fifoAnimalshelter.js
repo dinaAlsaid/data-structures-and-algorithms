@@ -14,8 +14,8 @@ class cat {
 }
 class AnimalShelter {
   constructor() {
-    this.catQ = new SandQ.queue();
-    this.dogQ = new SandQ.queue();
+    this.catQ = new SandQ.Queue();
+    this.dogQ = new SandQ.Queue();
   }
   enqueue(animal) {
     if (animal instanceof cat) {
