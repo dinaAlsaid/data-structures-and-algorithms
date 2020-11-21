@@ -1,6 +1,6 @@
 'use strict';
 
-const mergeSort = require('./merge.js');
+const mergeSort = require('../merge.js');
 
 describe('Selection sorting algorithm', () => {
   it('returns a sorted array', () => {
