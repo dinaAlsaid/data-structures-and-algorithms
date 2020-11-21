@@ -21,7 +21,6 @@ describe('Binary Tree',()=>{
     BST.add(3);
     BST.add(2);
   });
-  
   it('Can successfully return a collection from a preorder traversal',()=>{
     expect(tree.preOrder()).toEqual(['root',4,2,3]);
 
@@ -36,4 +35,5 @@ describe('Binary Tree',()=>{
   });
 
 
-})
+});
+
