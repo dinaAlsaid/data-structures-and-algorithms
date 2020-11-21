@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 class Node {
   constructor(value) {
@@ -27,7 +27,7 @@ class LinkedList {
   includes(val) {
     let currentNode = this.head;
     while (currentNode.next) {
-      if (currentNode.value == val) {
+      if (currentNode.value === val) {
         return true;
       }
       currentNode = currentNode.next;
@@ -39,7 +39,7 @@ class LinkedList {
     return false;
   }
   toString() {
-    let retString = "";
+    let retString = '';
     let currentNode = this.head;
     while (currentNode.next) {
       retString = `${retString}{${currentNode.value}}=>`;
@@ -70,7 +70,7 @@ class LinkedList {
         }
       }
     } else {
-      return "exception";
+      return 'exception';
     }
   }
   insertAfter(val, newVal) {
@@ -92,7 +92,7 @@ class LinkedList {
         return this;
       }
     } else {
-      return "exception";
+      return 'exception';
     }
   }
 
@@ -108,13 +108,24 @@ class LinkedList {
     if (k <= llArr.length - 1 && k >= 0) {
       let i;
       for (i = llArr.length - 1; i > llArr.length - 1 - k; i--) {
-        // will incriment the i according to k then i will be used outside the loop
+        // will increment the i according to k then i will be used outside the loop
       }
       return llArr[i];
     } else {
-      return "exception";
+      return 'exception';
     }
   }
+  prepend(val) {
+    const node = new Node(val);
+    if (!this.head) {
+      this.head = node;
+    } else {
+      node.next = this.head;
+      this.head = node;
+    }
+    return this.head;
+  }
+
 }
 
 module.exports = LinkedList;
