@@ -31,6 +31,7 @@ level|code challenge
 401|binary trees
 401|find maximum value
 401|Selection sort
+401|insertion sort
 401|merge sort
 401|quick Sort
 401|hashtables
