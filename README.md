@@ -33,3 +33,4 @@ level|code challenge
 401|Selection sort
 401|merge sort
 401|quick Sort
+401|hashtables
