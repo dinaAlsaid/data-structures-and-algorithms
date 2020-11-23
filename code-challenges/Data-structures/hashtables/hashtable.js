@@ -19,6 +19,9 @@ class HashTable {
   }
   get(key) {
     let index = this.hash(key);
+    if(!this.storage[index]){
+      return null;
+    }
     let currentNode = this.storage[index].head;
     while (currentNode.value) {
       if (currentNode.value[key]) {
