@@ -1,9 +1,12 @@
 'use strict';
 
-// const tree = require('../../Data-structures/tree/tree');
 const HashTable = require('../../Data-structures/hashtables/hashtable.js');
 // const {BinaryTree} = require('../../Data-structures/tree/tree.js');
 
+/**
+ * @param {BinaryTree} tree1 - first input tree
+ * @param {BinaryTree} tree2 - second input tree
+ */
 
 function treeInsertion(tree1, tree2) {
   // assuming tree inputs we can use tree methods
@@ -22,7 +25,9 @@ function treeInsertion(tree1, tree2) {
       // let llIndex = HT.storage[HT.hash(tree2Arr[i])];
       // 1 refers to the first array
       //no need to add the values of the second tree to the table
-      retArr.push(tree2Arr[i]);
+      if(!retArr.includes(tree2Arr[i])){
+        retArr.push(tree2Arr[i]);
+      }
     }
   }
   return retArr;

@@ -49,7 +49,8 @@ class HashTable {
     }
   }
   hash(key) {
-    let code = key.split('').reduce((a, item) => {
+    // why isn't this pushed yet
+    let code = key.toString().split('').reduce((a, item) => {
       return a + item.charCodeAt(0);
     }, 0);
     let hashKey = (code * 19) % this.size;
