@@ -12,16 +12,21 @@ describe('Binary Tree',()=>{
 
   });
   it('Can successfully add a left child and right child to a single root node',()=>{
-    const BST = new BinaryTree.BinarySearchTree(tree);
-    BST.add('root');
-    expect(tree.root.value).toEqual('root');
-    expect(tree.root.right).toBeDefined();
-    expect(tree.root.left).toBeDefined();
-    BST.add(4);
-    BST.add(3);
-    BST.add(2);
+    const tree1 = new BinaryTree.BinaryTree();
+    tree1.add('root');
+    tree1.add(4);
+    tree1.add(3);
+    tree1.add(2);
+    expect(tree1.root.value).toEqual('root');
+    expect(tree1.root.right).toBeDefined();
+    expect(tree1.root.left).toBeDefined();
   });
+
   it('Can successfully return a collection from a preorder traversal',()=>{
+    tree.add('root');
+    tree.add(4);
+    tree.add(3);
+    tree.add(2);
     expect(tree.preOrder()).toEqual(['root',4,2,3]);
 
   });

@@ -23,9 +23,9 @@ Binary Tree methods:
 - inOrder
 - postOrder
 - find-maximum-value
+- add
 
 Binary Search tree methods:
 
 - add()
 - contain()
-
