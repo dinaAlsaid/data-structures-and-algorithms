@@ -21,7 +21,7 @@ describe('Binary Tree',()=>{
     expect(tree1.root.right).toBeDefined();
     expect(tree1.root.left).toBeDefined();
   });
-  
+
   it('Can successfully return a collection from a preorder traversal',()=>{
     tree.add('root');
     tree.add(4);
