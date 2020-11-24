@@ -19,7 +19,7 @@ class HashTable {
   }
   get(key) {
     let index = this.hash(key);
-    if(!this.storage[index]){
+    if (!this.storage[index]) {
       return null;
     }
     let currentNode = this.storage[index].head;
@@ -28,21 +28,26 @@ class HashTable {
         return currentNode.value[key];
       }
       currentNode = currentNode.next;
-      if(!currentNode){
+      if (!currentNode) {
         return null;
       }
     }
   }
   contain(key) {
     let index = this.hash(key);
+    //if the hash table is full and it doesn't contain the key it will give an error
     if (this.storage[index]) {
       let currentNode = this.storage[index].head;
+      console.log(currentNode.value);
       while (currentNode.value) {
         if (currentNode.value[key]) {
           // return currentNode.value[key];
           return true;
         }
         currentNode = currentNode.next;
+        if (!currentNode) {
+          return false;
+        }
       }
     } else {
       return false;
