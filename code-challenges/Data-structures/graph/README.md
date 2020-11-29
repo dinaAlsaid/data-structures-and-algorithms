@@ -30,3 +30,11 @@ Takes in a given node
 Include the weight of the connection in the returned collection -->
 Size()
 <!-- Returns the total number of nodes in the graph -->
+breadthFirst()
+
+## whiteboard
+
+Big O:
+time O(n^2)  
+space O(n)
+![class37](./class37.PNG)
