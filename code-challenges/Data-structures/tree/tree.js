@@ -62,7 +62,6 @@ class BinaryTree {
     } else {
       let front;
       Q.enqueue(this.root);
-
       while (Q.peek().value) {
         front = Q.dequeue();
 
@@ -84,39 +83,36 @@ class BinaryTree {
   }
 }
 
-class BinarySearchTree {
-  constructor(tree) {
+class BinarySearchTree extends BinaryTree {
+  constructor() {
+    super();
     this.Q = new SandQ.Queue();
-    this.tree = tree;
   }
   add(val) {
-    if (!this.tree.root) {
-      this.tree.root = new Node(val);
+    let node = new Node(val);
+    if (!this.root) {
+      this.root = node;
     } else {
-      let front;
-      this.Q.enqueue(this.tree.root);
-
-      while (this.Q.peek().value) {
-        front = this.Q.dequeue();
-
-        if (!front.left) {
-          front.left = new Node(val);
-          break;
-        } else {
-          this.Q.enqueue(front.left);
+      const traverse = (current) => {
+        if (node.value <= current.value) {
+          if (current.left) {
+            traverse(current.left);
+          } else {
+            current.left = node;
+          }
+        } else if (node.value > current.value) {
+          if (current.right) {
+            traverse(current.right);
+          } else {
+            current.right = node;
+          }
         }
-        if (!front.right) {
-          front.right = new Node(val);
-          break;
-        } else {
-          this.Q.enqueue(front.right);
-        }
-      }
-      front = new Node(val);
+      };
+      traverse(this.root);
     }
   }
   contain(val) {
-    let arr = this.tree.preOrder();
+    let arr = this.preOrder();
     if (arr.includes(val)) {
       return true;
     } else {
@@ -124,5 +120,12 @@ class BinarySearchTree {
     }
   }
 }
+
+let BT = new BinarySearchTree();
+BT.add(5);
+BT.add(2);
+BT.add(6);
+BT.add(3);
+console.log(BT.contain(3));
 
 module.exports = { BinarySearchTree, BinaryTree };
